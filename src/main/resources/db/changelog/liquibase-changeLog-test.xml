@@ -1,0 +1,412 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet author="Witold Walaszek" id="generate data">
+        <insert tableName="model">
+            <column name="id" value="64819617-5e80-4b1d-9e95-4934df60aa13"/>
+            <column name="make" value="BMW"/>
+            <column name="model" value="318d"/>
+            <column name="production_from" value="2019-01-01"/>
+            <column name="production_to" value="2020-01-30"/>
+        </insert>
+
+        <insert tableName="model">
+            <column name="id" value="e54f144b-7f66-4853-a35b-210544cd6df4"/>
+            <column name="make" value="BMW"/>
+            <column name="model" value="518d"/>
+            <column name="production_from" value="2019-01-01"/>
+            <column name="production_to" value="2020-01-30"/>
+        </insert>
+
+        <insert tableName="model">
+            <column name="id" value="45908936-feaa-4f05-ab70-bbc1bcc57d0a"/>
+            <column name="make" value="BMW"/>
+            <column name="model" value="118d"/>
+            <column name="production_from" value="2019-06-01"/>
+            <column name="production_to" value="2020-01-30"/>
+        </insert>
+
+        <insert tableName="model">
+            <column name="id" value="71ccb792-3c10-48ba-a2da-be92206e41e6"/>
+            <column name="make" value="VW"/>
+            <column name="model" value="Golf"/>
+            <column name="production_from" value="2018-01-01"/>
+            <column name="production_to" value="2020-01-30"/>
+        </insert>
+
+        <insert tableName="model">
+            <column name="id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="make" value="VW"/>
+            <column name="model" value="Passat"/>
+            <column name="production_from" value="2018-01-01"/>
+            <column name="production_to" value="2020-01-30"/>
+        </insert>
+
+        <insert tableName="model">
+            <column name="id" value="38e0b4ab-d68a-416c-a69f-2a289571bd18"/>
+            <column name="make" value="FIAT"/>
+            <column name="model" value="Punto"/>
+            <column name="production_from" value="2016-01-01"/>
+            <column name="production_to" value="2020-01-30"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="18da03a2-bd46-4317-bfda-f58402b3dcc1"/>
+            <column name="name" value="Part - 1"/>
+            <column name="description" value="Description - 1"/>
+            <column name="price" value="1.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="1"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="86fd6a63-9b82-479b-a266-29d77148b168"/>
+            <column name="name" value="Part - 2"/>
+            <column name="description" value="Description - 2"/>
+            <column name="price" value="2.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="2"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="56ac638d-f2d8-4283-b7c0-bc5adc57dfab"/>
+            <column name="name" value="Part - 3"/>
+            <column name="description" value="Description - 3"/>
+            <column name="price" value="3.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="3"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="f462e32c-6f28-42f9-92fd-e0cd2f6ff069"/>
+            <column name="name" value="Part - 4"/>
+            <column name="description" value="Description - 4"/>
+            <column name="price" value="4.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="4"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="40ee00ee-95b7-4c70-b28b-efd2c9505b52"/>
+            <column name="name" value="Part - 5"/>
+            <column name="description" value="Description - 5"/>
+            <column name="price" value="5.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="5"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="27b36bb2-f025-472e-94f3-71acd8718ef7"/>
+            <column name="name" value="Part - 6"/>
+            <column name="description" value="Description - 6"/>
+            <column name="price" value="6.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="6"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="28b0acae-aa1a-410b-97b8-15046c3ed098"/>
+            <column name="name" value="Part - 7"/>
+            <column name="description" value="Description - 7"/>
+            <column name="price" value="7.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="7"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="28697c03-d141-4162-918e-e4486129cd0c"/>
+            <column name="name" value="Part - 8"/>
+            <column name="description" value="Description - 8"/>
+            <column name="price" value="8.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="8"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="bc3063c8-4e77-4192-a1af-f1611c4007ab"/>
+            <column name="name" value="Part - 9"/>
+            <column name="description" value="Description - 9"/>
+            <column name="price" value="9.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="9"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="a6cabe86-cf1f-40b7-ba60-edd1646414a7"/>
+            <column name="name" value="Part - 10"/>
+            <column name="description" value="Description - 10"/>
+            <column name="price" value="10.0"/>
+            <column name="available" value="true"/>
+            <column name="ship_days" value="10"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="4407d763-94ab-42e1-b03c-b7863f32dedc"/>
+            <column name="name" value="Part - 11"/>
+            <column name="description" value="Description - 11"/>
+            <column name="price" value="11.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="11"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="9cfb7277-2a7c-4558-ba3e-cb37651fab00"/>
+            <column name="name" value="Part - 12"/>
+            <column name="description" value="Description - 12"/>
+            <column name="price" value="12.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="60556b65-b313-4f6d-b237-43b8ac6d55c1"/>
+            <column name="name" value="Part - 13"/>
+            <column name="description" value="Description - 13"/>
+            <column name="price" value="13.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="35678b7c-55b3-4c3f-a6d8-40a6ec0cef8a"/>
+            <column name="name" value="Part - 14"/>
+            <column name="description" value="Description - 14"/>
+            <column name="price" value="14.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="64500eed-ea83-4e39-b878-25d84710d46e"/>
+            <column name="name" value="Part - 15"/>
+            <column name="description" value="Description - 15"/>
+            <column name="price" value="15.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="bf0704b8-a004-427e-a51b-eff71909e0ef"/>
+            <column name="name" value="Part - 16"/>
+            <column name="description" value="Description - 16"/>
+            <column name="price" value="16.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="206cbf01-8d43-462f-a704-dfcb7c0dc618"/>
+            <column name="name" value="Part - 17"/>
+            <column name="description" value="Description - 17"/>
+            <column name="price" value="17.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="37bfe6d5-7b35-4faf-81fc-61c78241bfee"/>
+            <column name="name" value="Part - 18"/>
+            <column name="description" value="Description - 18"/>
+            <column name="price" value="18.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="7ee2e38c-3981-4040-95f2-f0fec1b16f0c"/>
+            <column name="name" value="Part - 19"/>
+            <column name="description" value="Description - 19"/>
+            <column name="price" value="19.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="5eadd544-5ecb-47d9-856b-7fc802617fca"/>
+            <column name="name" value="Part - 20"/>
+            <column name="description" value="Description - 20"/>
+            <column name="price" value="20.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="part">
+            <column name="id" value="0b3428ee-df8f-4664-8099-9a6d9ba763d1"/>
+            <column name="name" value="Part - 21"/>
+            <column name="description" value="Description - 21"/>
+            <column name="price" value="21.0"/>
+            <column name="available" value="false"/>
+            <column name="ship_days" value="0"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="38e0b4ab-d68a-416c-a69f-2a289571bd18"/>
+            <column name="part_id" value="0b3428ee-df8f-4664-8099-9a6d9ba763d1"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="64819617-5e80-4b1d-9e95-4934df60aa13"/>
+            <column name="part_id" value="18da03a2-bd46-4317-bfda-f58402b3dcc1"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="64819617-5e80-4b1d-9e95-4934df60aa13"/>
+            <column name="part_id" value="86fd6a63-9b82-479b-a266-29d77148b168"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="e54f144b-7f66-4853-a35b-210544cd6df4"/>
+            <column name="part_id" value="18da03a2-bd46-4317-bfda-f58402b3dcc1"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="e54f144b-7f66-4853-a35b-210544cd6df4"/>
+            <column name="part_id" value="86fd6a63-9b82-479b-a266-29d77148b168"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="45908936-feaa-4f05-ab70-bbc1bcc57d0a"/>
+            <column name="part_id" value="56ac638d-f2d8-4283-b7c0-bc5adc57dfab"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="45908936-feaa-4f05-ab70-bbc1bcc57d0a"/>
+            <column name="part_id" value="f462e32c-6f28-42f9-92fd-e0cd2f6ff069"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="71ccb792-3c10-48ba-a2da-be92206e41e6"/>
+            <column name="part_id" value="40ee00ee-95b7-4c70-b28b-efd2c9505b52"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="27b36bb2-f025-472e-94f3-71acd8718ef7"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="28b0acae-aa1a-410b-97b8-15046c3ed098"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="28697c03-d141-4162-918e-e4486129cd0c"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="bc3063c8-4e77-4192-a1af-f1611c4007ab"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="a6cabe86-cf1f-40b7-ba60-edd1646414a7"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="4407d763-94ab-42e1-b03c-b7863f32dedc"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="4407d763-94ab-42e1-b03c-b7863f32dedc"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="9cfb7277-2a7c-4558-ba3e-cb37651fab00"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="60556b65-b313-4f6d-b237-43b8ac6d55c1"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="60556b65-b313-4f6d-b237-43b8ac6d55c1"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="35678b7c-55b3-4c3f-a6d8-40a6ec0cef8a"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="64500eed-ea83-4e39-b878-25d84710d46e"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="bf0704b8-a004-427e-a51b-eff71909e0ef"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="206cbf01-8d43-462f-a704-dfcb7c0dc618"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="37bfe6d5-7b35-4faf-81fc-61c78241bfee"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="71ccb792-3c10-48ba-a2da-be92206e41e6"/>
+            <column name="part_id" value="7ee2e38c-3981-4040-95f2-f0fec1b16f0c"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="7ee2e38c-3981-4040-95f2-f0fec1b16f0c"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="bf41f24f-57f1-4058-89e5-48a427581257"/>
+            <column name="part_id" value="7ee2e38c-3981-4040-95f2-f0fec1b16f0c"/>
+        </insert>
+
+        <insert tableName="model_part">
+            <column name="model_id" value="e54f144b-7f66-4853-a35b-210544cd6df4"/>
+            <column name="part_id" value="5eadd544-5ecb-47d9-856b-7fc802617fca"/>
+        </insert>
+
+        <insert tableName="sales_argument">
+            <column name="id" value="0d5a2476-0881-4986-9461-bafe7b2eaa4b"/>
+            <column name="argument" value="part - 1 - argument-1"/>
+            <column name="part_id" value="18da03a2-bd46-4317-bfda-f58402b3dcc1"/>
+        </insert>
+
+        <insert tableName="sales_argument">
+            <column name="id" value="0d5a2476-0881-4986-9461-bafe7b2eaa4b"/>
+            <column name="argument" value="part - 1 - argument-2"/>
+            <column name="part_id" value="18da03a2-bd46-4317-bfda-f58402b3dcc1"/>
+        </insert>
+
+        <insert tableName="sales_argument">
+            <column name="id" value="0d5a2476-0881-4986-9461-bafe7b2eaa4b"/>
+            <column name="argument" value="part - 1 - argument-3"/>
+            <column name="part_id" value="18da03a2-bd46-4317-bfda-f58402b3dcc1"/>
+        </insert>
+
+        <insert tableName="recall">
+            <column name="id" value="650b7acd-db06-4638-b457-498742e62790"/>
+            <column name="name" value="recall - 1 - part - 1"/>
+            <column name="part_id" value="18da03a2-bd46-4317-bfda-f58402b3dcc1"/>
+            <column name="recall_start" value="2020-01-01"/>
+            <column name="recall_stop" value="2020-01-10"/>
+        </insert>
+
+        <insert tableName="recall">
+            <column name="id" value="0dce8728-6e81-4b0a-a197-0edc9bfdd440"/>
+            <column name="name" value="recall - 2 - part - 1"/>
+            <column name="part_id" value="18da03a2-bd46-4317-bfda-f58402b3dcc1"/>
+            <column name="recall_start" value="2020-01-10"/>
+            <column name="recall_stop" value="2020-01-20"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

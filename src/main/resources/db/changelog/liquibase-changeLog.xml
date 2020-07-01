@@ -1,0 +1,44 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet author="Witold Walaszek" id="generate tables">
+        <createTable tableName="model">
+            <column name="id" type="VARCHAR(36)"/>
+            <column name="make" type="VARCHAR(50)"/>
+            <column name="model" type="VARCHAR(50)"/>
+            <column name="production_from" type="DATE"/>
+            <column name="production_to" type="DATE"/>
+        </createTable>
+
+        <createTable tableName="part">
+            <column name="id" type="VARCHAR(36)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(500)"/>
+            <column name="price" type="decimal"/>
+            <column name="available" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ship_days" type="smallint"/>
+        </createTable>
+
+        <createTable tableName="model_part">
+            <column name="model_id" type="VARCHAR(36)"/>
+            <column name="part_id" type="VARCHAR(36)"/>
+        </createTable>
+
+        <createTable tableName="sales_argument">
+            <column name="id" type="VARCHAR(36)"/>
+            <column name="argument" type="VARCHAR(500)"/>
+            <column name="part_id" type="VARCHAR(36)"/>
+        </createTable>
+
+        <createTable tableName="recall">
+            <column name="id" type="VARCHAR(36)"/>
+            <column name="name" type="VARCHAR(500)"/>
+            <column name="part_id" type="VARCHAR(36)"/>
+            <column name="recall_start" type="DATE"/>
+            <column name="recall_stop" type="DATE"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
