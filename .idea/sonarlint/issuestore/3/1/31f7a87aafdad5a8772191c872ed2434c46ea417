@@ -1,10 +1,0 @@
-
-b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(‘—à¦8ÿÕ¤‹°.
-T
-java:S3655"7Call "Optional#isPresent()" before accessing the value.(î°Éæ8²Åú²°.
-Y
-java:S3655"7Call "Optional#isPresent()" before accessing the value.(¾¡“£ùÿÿÿÿ8²Åú²°.
-T
-java:S3655"7Call "Optional#isPresent()" before accessing the value.(âÂæü8²Åú²°.
-Y
-java:S3655"7Call "Optional#isPresent()" before accessing the value.(Äšò¼øÿÿÿÿ8²Åú²°.
