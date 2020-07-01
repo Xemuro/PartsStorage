@@ -22,7 +22,6 @@ public class RecallEntity {
     @Column
     private String name;
 
-    //TODO add relation
     @Column(name = "part_id")
     private String partId;
 
