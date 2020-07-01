@@ -27,7 +27,7 @@ public class RecallQueryControllerIntegrationTest {
     @Test
     public void getRecallActionShouldReturnOneResultForRange() {
         given().port(port)
-               .get("/query/v1/recall?from=2020-01-10&to=2020-01-20")
+               .get("/query/v1/recall?from=2020-01-11&to=2020-01-20")
                .then()
                .statusCode(200)
                .body("size()", is(1));
@@ -58,5 +58,32 @@ public class RecallQueryControllerIntegrationTest {
                .then()
                .statusCode(200)
                .body("size()", is(0));
+    }
+
+    @Test
+    public void getRecallActionShouldReturnOneResultForPartialRangeFrom() {
+        given().port(port)
+               .get("/query/v1/recall?from=2014-01-01&to=2016-01-30")
+               .then()
+               .statusCode(200)
+               .body("size()", is(1));
+    }
+
+    @Test
+    public void getRecallActionShouldReturnOneResultForPartialRangeTo() {
+        given().port(port)
+               .get("/query/v1/recall?from=2018-05-01&to=2018-12-10")
+               .then()
+               .statusCode(200)
+               .body("size()", is(1));
+    }
+
+    @Test
+    public void getRecallActionShouldReturnTwoResultsForDaytoDay() {
+        given().port(port)
+               .get("/query/v1/recall?from=2015-01-01&to=2018-12-01")
+               .then()
+               .statusCode(200)
+               .body("size()", is(2));
     }
 }

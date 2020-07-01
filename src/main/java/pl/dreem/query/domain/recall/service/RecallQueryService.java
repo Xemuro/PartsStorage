@@ -22,7 +22,7 @@ public class RecallQueryService {
     @Transactional(readOnly = true)
     public Set<RecallDto> getRecalls(final DateRange filter) {
         Objects.requireNonNull(filter);
-        return repository.findAllByRecallStartIsGreaterThanEqualAndRecallFinishLessThanEqual(filter.getFrom(), filter.getTo())
+        return repository.findAllByRecallStartBetweenOrRecallFinishBetween(filter.getFrom(), filter.getTo())
                          .stream()
                          .map(RecallDto::fromEntity)
                          .collect(Collectors.toUnmodifiableSet());

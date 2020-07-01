@@ -409,4 +409,22 @@
             <column name="recall_stop" value="2020-01-20"/>
         </insert>
     </changeSet>
+    <changeSet id="Add new recall" author="Witold Walaszek">
+
+        <insert tableName="recall">
+            <column name="id" value="3966f30c-0f3d-4ab8-a0c9-660475c681cb"/>
+            <column name="name" value="recall - 3"/>
+            <column name="part_id" value="bc3063c8-4e77-4192-a1af-f1611c4007ab"/>
+            <column name="recall_start" value="2015-01-01"/>
+            <column name="recall_stop" value="2018-01-01"/>
+        </insert>
+
+        <insert tableName="recall">
+            <column name="id" value="846157c7-ca8e-4cf4-8e9e-32a42025a525"/>
+            <column name="name" value="recall - 4"/>
+            <column name="part_id" value="bc3063c8-4e77-4192-a1af-f1611c4007ab"/>
+            <column name="recall_start" value="2017-01-01"/>
+            <column name="recall_stop" value="2018-12-01"/>
+        </insert>
+    </changeSet>
 </databaseChangeLog>
