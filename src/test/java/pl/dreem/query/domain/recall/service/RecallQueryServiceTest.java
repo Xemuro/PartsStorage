@@ -41,7 +41,7 @@ public class RecallQueryServiceTest {
         final DateRange filter = DateRange.from(expectedFrom, expectedTo);
 
         Mockito.when(
-                repository.findAllByRecallStartIsGreaterThanEqualAndRecallFinishLessThanEqual(expectedFrom, expectedTo))
+                repository.findRecallsByDate(expectedFrom, expectedTo))
                .thenReturn(mockResult);
 
         final Set<RecallDto> actualResult = sut.getRecalls(filter);

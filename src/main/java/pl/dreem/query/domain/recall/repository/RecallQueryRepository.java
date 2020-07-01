@@ -11,7 +11,5 @@ import java.util.Set;
 public interface RecallQueryRepository extends JpaRepository<RecallEntity, String> {
 
     @Query(value = "select rc from RecallEntity rc where rc.recallStart between :startDate and :endDate or rc.recallFinish between :startDate and :endDate")
-    Set<RecallEntity> findAllByRecallStartBetweenOrRecallFinishBetween(@Param("startDate") LocalDate from,
-                                                                       @Param("endDate") LocalDate to);
-
+    Set<RecallEntity> findRecallsByDate(@Param("startDate") LocalDate from, @Param("endDate") LocalDate to);
 }
