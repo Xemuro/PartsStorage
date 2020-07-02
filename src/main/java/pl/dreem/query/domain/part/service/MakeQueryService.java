@@ -3,7 +3,7 @@ package pl.dreem.query.domain.part.service;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.dreem.query.domain.part.dto.*;
-import pl.dreem.query.domain.part.jpa.repository.MakeQueryRepository;
+import pl.dreem.query.domain.part.repository.MakeQueryRepository;
 
 import java.util.Map;
 import java.util.Objects;

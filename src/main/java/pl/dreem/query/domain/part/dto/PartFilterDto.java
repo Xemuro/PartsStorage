@@ -1,5 +1,7 @@
 package pl.dreem.query.domain.part.dto;
 
+import org.apache.logging.log4j.util.Strings;
+
 import java.util.Objects;
 import java.util.Optional;
 
@@ -13,11 +15,27 @@ public final class PartFilterDto {
         this.description = description;
     }
 
-    public Optional<String> getName() {
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getNameForQuery() {
+        return name == null ? Strings.EMPTY : name;
+    }
+
+    public String getDescriptionForQuery() {
+        return description == null ? Strings.EMPTY : description;
+    }
+
+    public Optional<String> getNameAsOptional() {
         return Optional.ofNullable(name);
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> getDescriptionAsOptional() {
         return Optional.ofNullable(description);
     }
 

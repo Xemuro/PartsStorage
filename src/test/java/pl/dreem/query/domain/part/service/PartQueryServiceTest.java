@@ -16,7 +16,7 @@ import pl.dreem.query.domain.part.dto.ModelDto;
 import pl.dreem.query.domain.part.dto.PartAvailabilityDto;
 import pl.dreem.query.domain.part.dto.PartDto;
 import pl.dreem.query.domain.part.dto.PartFilterDto;
-import pl.dreem.query.domain.part.jpa.repository.PartQueryRepository;
+import pl.dreem.query.domain.part.repository.PartQueryRepository;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -104,7 +104,7 @@ public class PartQueryServiceTest {
         final PartEntity expectedPart = preparePartEntity(testPartId, testModelEntity);
         final Set<PartEntity> mockParts = Set.of(expectedPart);
 
-        when(repository.findAlLByModelsDetails(expectedModelId.getIdAsLiteral())).thenReturn(mockParts);
+        when(repository.findAllByModelsDetails(expectedModelId.getIdAsLiteral())).thenReturn(mockParts);
 
         final Set<PartDto> actualResult = sut.getPartsByMakeId(expectedModelId);
 
@@ -122,7 +122,7 @@ public class PartQueryServiceTest {
     public void getPartsByMakeIdShouldReturnEmptyResultForNotFoundMake() {
         final ModelId expectedModelId = ModelId.from(UUID.randomUUID());
 
-        when(repository.findAlLByModelsDetails(expectedModelId.getIdAsLiteral())).thenReturn(Collections.emptySet());
+        when(repository.findAllByModelsDetails(expectedModelId.getIdAsLiteral())).thenReturn(Collections.emptySet());
         final Set<PartDto> actualResult = sut.getPartsByMakeId(expectedModelId);
 
         assertThat(actualResult.size(), is(0));
@@ -137,7 +137,8 @@ public class PartQueryServiceTest {
     public void getPartsWithModelsShouldReturnEmptyResultForNotFoundPart() {
         final PartFilterDto filter = PartFilterDto.from("model", "description");
 
-        when(repository.findAll(Mockito.any(Specification.class))).thenReturn(Collections.emptyList());
+        when(repository.findAllByFilters(filter.getNameForQuery(), filter.getDescriptionForQuery())).thenReturn(
+                Collections.emptySet());
 
         final Map<ModelDto, Set<PartDto>> actualResult = sut.getPartsWithModels(filter);
 
@@ -151,11 +152,12 @@ public class PartQueryServiceTest {
         final ModelEntity testModelEntity = prepareModelEntity(testModelId);
         final ModelDto testModelDto = ModelDto.fromEntity(testModelEntity);
         final PartEntity testPartEntity = preparePartEntity(expectedPartId, testModelEntity);
-        final List<PartEntity> mockParts = List.of(testPartEntity);
+        final Set<PartEntity> mockParts = Set.of(testPartEntity);
 
         final PartFilterDto filter = PartFilterDto.from("model", "description");
 
-        when(repository.findAll(Mockito.any(Specification.class))).thenReturn(mockParts);
+        when(repository.findAllByFilters(filter.getNameForQuery(), filter.getDescriptionForQuery())).thenReturn(
+                mockParts);
 
         final Map<ModelDto, Set<PartDto>> actualResult = sut.getPartsWithModels(filter);
 

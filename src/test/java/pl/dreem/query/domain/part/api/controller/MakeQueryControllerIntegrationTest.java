@@ -96,7 +96,7 @@ public class MakeQueryControllerIntegrationTest {
     @Test
     public void getPartsForMakeWithFilterShouldReturnPartsFiltered() {
         given().port(port)
-               .get("/query/v1/make/parts?name=21&description=21")
+               .get("/query/v1/make/parts?part=21&description=21")
                .then()
                .statusCode(200)
                .body("[0].parts[0].description", containsString("21"));

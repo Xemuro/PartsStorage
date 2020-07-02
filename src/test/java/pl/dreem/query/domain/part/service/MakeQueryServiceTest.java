@@ -8,7 +8,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import pl.dreem.global.entity.ModelEntity;
 import pl.dreem.query.domain.part.dto.*;
-import pl.dreem.query.domain.part.jpa.repository.MakeQueryRepository;
+import pl.dreem.query.domain.part.repository.MakeQueryRepository;
 
 import java.time.LocalDate;
 import java.util.*;

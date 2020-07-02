@@ -1,5 +1,8 @@
 package pl.dreem.global.entity;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -14,6 +17,7 @@ public class SalesArgumentEntity {
     private String argument;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @Fetch(FetchMode.JOIN)
     @JoinColumn(name = "part_id", nullable = false)
     private PartEntity part;
 

@@ -9,8 +9,7 @@ import pl.dreem.query.domain.part.dto.ModelDto;
 import pl.dreem.query.domain.part.dto.PartAvailabilityDto;
 import pl.dreem.query.domain.part.dto.PartDto;
 import pl.dreem.query.domain.part.dto.PartFilterDto;
-import pl.dreem.query.domain.part.jpa.repository.PartQueryRepository;
-import pl.dreem.query.domain.part.jpa.specification.PartSpecification;
+import pl.dreem.query.domain.part.repository.PartQueryRepository;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -27,7 +26,7 @@ public class PartQueryService {
     @Transactional(readOnly = true)
     public Set<PartDto> getPartsByMakeId(final ModelId modelId) {
         Objects.requireNonNull(modelId);
-        return repository.findAlLByModelsDetails(modelId.getId().toString())
+        return repository.findAllByModelsDetails(modelId.getId().toString())
                          .stream()
                          .map(PartDto::fromEntity)
                          .collect(Collectors.toUnmodifiableSet());
@@ -37,9 +36,8 @@ public class PartQueryService {
     public Map<ModelDto, Set<PartDto>> getPartsWithModels(final PartFilterDto filter) {
         Objects.requireNonNull(filter);
         final Map<ModelDto, Set<PartDto>> result = new HashMap<>();
-
-        final PartSpecification specification = PartSpecification.from(filter);
-        final List<PartEntity> partEntity = repository.findAll(specification.getSpecification());
+        final Set<PartEntity> partEntity = repository.findAllByFilters(filter.getNameForQuery(),
+                                                                       filter.getDescriptionForQuery());
         partEntity.forEach(park -> park.getModelsDetails()
                                        .stream()
                                        .map(ModelDto::fromEntity)
